@@ -1,0 +1,50 @@
+body{
+    background-color: white;
+    color: black;
+}
+
+nav >.navbar-brand{
+    padding-left: 50px !important;
+}
+section{
+    margin: 10px;
+}
+
+section > h3 {
+    text-align: center;
+}
+
+.form-field{
+    padding-top: 20px;
+}
+
+.form-control{
+    border-radius: 0px !important;
+    background-color: white;
+    color: black;
+}
+
+button{
+    border-radius: 0px !important;
+}
+
+@media(min-width: 426px){
+  section{
+      margin: 15px auto;
+      width: 70%;
+  }
+}
+
+@media(min-width: 769px){
+    section{
+        margin: 15px auto;
+        width: 60%;
+    } 
+}
+
+@media(min-width: 1025px){
+    section{
+        margin: 15px auto;
+        width: 30%;
+    } 
+}

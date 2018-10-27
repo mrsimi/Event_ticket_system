@@ -1,0 +1,59 @@
+﻿@page
+@model Ticketing_System.Pages.IndexModel
+
+
+@{
+    ViewData["Title"] = "Ticketing System";
+}
+
+
+<section class="input-form">
+    <h3>Welcome to our event!</h3>
+
+    <form method="post">
+        <div class="form-field">
+            <div class="col-sm-12">
+                <div class="form-group">
+                    <label>First Name </label>
+                    <input type="text" asp-for="Attendee.FirstName" class="form-control" />
+                    <span asp-validation-for="Attendee.FirstName" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="col-sm-12">
+                <div class="form-group">
+                    <label>Last Name </label>
+                    <input type="text" asp-for="Attendee.LastName" class="form-control" />
+                    <span asp-validation-for="Attendee.LastName" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="col-sm-12">
+                <div class="form-group">
+                    <label>Email </label>
+                    <input type="email" asp-for="Attendee.Email" class="form-control" />
+                    <span asp-validation-for="Attendee.Email" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="col-sm-12">
+                <button type="submit" class="btn btn-default" id="submitTicket">Get Ticket</button>
+            </div>
+
+        </div>
+    </form>
+</section>
+
+@if(ViewData["Message"] != null)
+{
+    <script type="text/javascript">
+        window.onload = function () {
+            alert("@ViewData["Message"]")
+        };
+    </script>
+}
+
+
+
+
+@section Scripts {
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+
