@@ -137,7 +137,7 @@ namespace Ticketing_System
             using (var client = new SmtpClient())
             {
                 client.Connect("smtp.gmail.com", 587, false);
-                client.Authenticate("adegokesimi@gmail.com", "adegoke1234");
+                client.Authenticate("email", "password");
                 client.Send(message);
                 client.Disconnect(true);
             }
